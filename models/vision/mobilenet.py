@@ -1,9 +1,9 @@
 '''
 MobileNet implementation in PyTorch.
 Based on:
-- https://arxiv.org/abs/1704.04861 for MobileNet
-- https://arxiv.org/abs/1801.04381 for MobileNetV2
-- https://arxiv.org/abs/1905.02244 for MobileNetV3
+- "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications" for MobileNet (https://arxiv.org/abs/1704.04861)
+- "MobileNetV2: Inverted Residuals and Linear Bottlenecks" for MobileNetV2 (https://arxiv.org/abs/1801.04381)
+- "Searching for MobileNetV3" for MobileNetV3 (https://arxiv.org/abs/1905.02244)
 '''
 
 import torch
