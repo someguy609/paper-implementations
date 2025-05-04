@@ -1,9 +1,9 @@
 '''
 MobileNet implementation in PyTorch.
 Based on:
-- 
-- 
-- 
+- https://arxiv.org/abs/1704.04861 for MobileNet
+- https://arxiv.org/abs/1801.04381 for MobileNetV2
+- https://arxiv.org/abs/1905.02244 for MobileNetV3
 '''
 
 import torch
