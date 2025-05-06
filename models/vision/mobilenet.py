@@ -90,7 +90,7 @@ class MobileNetConfig:
 	base: Optional[int] = 32
 	num_classes: Optional[int] = 1000
 
-MOBILENET = MobileNetConfig()
+MOBILENET = MobileNetConfig([1, 2, 2, 6, 2])
 MOBILENETV2 = MobileNetConfig([1, 2, 3, 4, 3, 3, 1])
 
 class MobileNet(nn.Module):
