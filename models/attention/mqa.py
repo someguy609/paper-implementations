@@ -33,8 +33,8 @@ class MQA(nn.Module):
 		b, t, d = x.shape
 
 		q = self.wq(x).view(b, t, self.num_heads, self.head_dim).transpose(1, 2) # (b, nh, t, hd)
-		k = self.wk(x).view(b, t, 1, self.head_dim).transpose(1, 2) # (b, nh, 1, hd)
-		v = self.wv(x).view(b, t, 1, self.head_dim).transpose(1, 2) # (b, nh, 1, hd)
+		k = self.wk(x).view(b, t, 1, self.head_dim).transpose(1, 2) # (b, 1, t, hd)
+		v = self.wv(x).view(b, t, 1, self.head_dim).transpose(1, 2) # (b, 1, t, hd)
 
 		attn = (q @ k.transpose(-1, -2)) / self.head_dim ** 0.5 # (b, nh, t, t)
 
