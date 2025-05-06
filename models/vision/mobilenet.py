@@ -68,7 +68,7 @@ class Bottleneck(nn.Module):
 	) -> None:
 		super(Bottleneck, self).__init__()
 		self.pointwise = CBR6(in_channels, expansion * in_channels, kernel_size=1)
-		self.depthwise = CBR6(expansion * in_channels, expansion * in_channels, stride=stride, *args, **kwargs)
+		self.depthwise = CBR6(expansion * in_channels, expansion * in_channels, stride=stride, groups=in_channels * expansion, *args, **kwargs)
 		self.linear = CBR6(expansion * in_channels, out_channels, kernel_size=1, act=False)
 		self.shortcut = (
 			CBR6(in_channels, out_channels, kernel_size=1, stride=stride, act=False)
